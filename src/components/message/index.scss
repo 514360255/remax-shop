@@ -1,0 +1,38 @@
+.g-message {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	z-index: 999999;
+	transition: all 0.5s;
+	opacity: 0;
+
+	.g-message-content {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background-color: rgba(0, 0, 0, 0.7);
+		padding: 32px;
+		border-radius: 16px;
+		max-width: 70%;
+		min-width: 176px;
+		text-align: center;
+	}
+
+	.g-icon {
+		font-size: 40px;
+	}
+
+	.g-text {
+		font-size: 32px;
+		color: #fff;
+	}
+}
+.g-message-fade-in{
+  opacity: 1;
+}
+.g-message-fade-out{
+  opacity: 0;
+}
