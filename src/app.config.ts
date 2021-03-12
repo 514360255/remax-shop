@@ -1,11 +1,17 @@
 const pages = ['pages/index/index'];
+const platform: string = process.argv[process.argv.length - 1];
+
+// 通用配置
 const tabBar: any[] = [
     {label: '第一页面', route: 'pages/index/index', iconPath: '/assets/images/icon.png', selectedIconPath: '/assets/images/icon.png'},
     {label: '第二页面', route: 'pages/index/index', iconPath: '/assets/images/icon.png', selectedIconPath: '/assets/images/icon.png'},
     {label: '第三页面', route: 'pages/index/index', iconPath: '/assets/images/icon.png', selectedIconPath: '/assets/images/icon.png'},
 ];
 const color = '#282c34';
-const platform: string = process.argv[process.argv.length - 1];
+const backgroundColor = '#fff';
+const titleColor = '#333333';
+const activeTitleColor = '#ff00ff';
+const title = '测试';
 
 switch(platform) {
     case 'wechat':
@@ -32,26 +38,26 @@ export const wechat: WechatAppConfig = {
     pages,
     window: {
         navigationBarBackgroundColor: color,
-        navigationBarTitleText: '',
+        navigationBarTitleText: title,
     },
     tabBar: {
-        backgroundColor: '#fff',
-        color: '#333333',
-        selectedColor: '#ff00ff',
+        backgroundColor: backgroundColor,
+        color: titleColor,
+        selectedColor: activeTitleColor,
         list: tabBar
     }
 };
 
 export const web: WebAppConfig = {
     pages,
-    title: '1',
+    title: title,
     router: {
         type: 'history'
     },
     tabBar: {
-        backgroundColor: '#fff',
-        activeTitleColor: 'red',
-        titleColor: 'blue',
+        backgroundColor: backgroundColor,
+        titleColor: titleColor,
+        activeTitleColor: activeTitleColor,
         items: tabBar
     }
 };
