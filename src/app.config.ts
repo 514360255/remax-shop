@@ -3,14 +3,14 @@ const platform: string = process.argv[process.argv.length - 1];
 
 // 通用配置
 const tabBar: any[] = [
-    {label: '第一页面', route: 'pages/index/index', iconPath: '/assets/images/icon.png', selectedIconPath: '/assets/images/icon.png'},
-    {label: '第二页面', route: 'pages/index/index', iconPath: '/assets/images/icon.png', selectedIconPath: '/assets/images/icon.png'},
-    {label: '第三页面', route: 'pages/index/index', iconPath: '/assets/images/icon.png', selectedIconPath: '/assets/images/icon.png'},
+    {label: '第一页面', route: 'pages/index/index', iconPath: '/assets/images/icon.png', selectedIconPath: 'https://test.pharmaos.com/static/paas-configcenter-static/static/logo@2x.2cf73c50.png'},
+    {label: '第二页面', route: 'pages/two/index', iconPath: '/assets/images/icon.png', selectedIconPath: '/assets/images/icon.png'},
+    {label: '第三页面', route: 'pages/three/index', iconPath: '/assets/images/icon.png', selectedIconPath: '/assets/images/icon.png'},
 ];
 const color = '#282c34';
 const backgroundColor = '#fff';
-const titleColor = '#333333';
-const activeTitleColor = '#ff00ff';
+const titleColor = '#ff00ff';
+const activeTitleColor = '#333333';
 const title = '测试';
 
 switch(platform) {
